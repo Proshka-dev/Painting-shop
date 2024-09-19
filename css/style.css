@@ -37,6 +37,12 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+/* Обнуление фона кнопок */
+button {
+	background-color: transparent;
+}
+/*--------------------*/
+
 
 /* Шрифт по умолчанию */
 body {
@@ -63,8 +69,6 @@ body {
 	--card_text-color: #2C2D35;
 	--card_greytext-color: #86928B;
 	--card_backgr-color: #E1EDE6;
-
-                     
 }
 /* --------------------- */
 
@@ -79,7 +83,6 @@ body {
 }
 .header__body {
 	height: 100px;
-	/* border: 1px solid black; */
 	display: flex;
 	align-items: center;
 	padding: 0 15px;
@@ -127,9 +130,7 @@ body {
 	margin-bottom: 60px;
 }
 .production__button {
-	width: 225px;
-	height: 65px;
-	/* display: flex; */
+	padding: 19px 58px;
 	font-size: 20px;
 	color: var(--green-color);
 	border: 1px solid var(--green-color);
@@ -154,8 +155,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 126px;
+	/* width: 126px; */
 	height: 43px;
+	padding: 0px 20px;
 	background-color: var(--lightgreen-color-btn);
 	color: var(--black-color);
 	border-radius: 21.5px;
@@ -171,22 +173,23 @@ body {
 }
 .catalog__body {
 	display: flex;
-	/* gap: 2.7027%; */
-	/* gap: 30px; */
 	flex-wrap: wrap;
-	/* margin-left: -15px; */
-	/* margin-right: -15px; */
-	/* border: 1px solid black; */
+	/* margin: 0 -15px; */
+	margin: 0 -15px 70px -15px;
+
 }
+
 .catalog__item {
+	padding: 0 15px;
+	flex: 1 1 33.333%;
+	margin-bottom: 30px;
+}
+
+.catalog__item-body {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--card_backgr-color);
-	width: 50%;
-	padding: 20px;
-	/* margin-left: -15px; */
-	/* margin-right: -15px; */
-	margin-bottom: 30px;
+	padding: 20px 20px 30px 20px;
 }
 .catalog__item-pic {
 	margin-bottom: 20px;
@@ -211,13 +214,11 @@ body {
 	margin-bottom: 20px;
 }
 .catalog__item-button {
-	height: 60px;
-	/* display: flex; */
+	padding: 21px 105px;
 	background-color: transparent;
 	border: 1px solid var(--card_border-color);
 	color: var(--card_border-color);
 	font-size: 20px;
-	margin-bottom: 10px;
 }
 
 
