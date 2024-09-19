@@ -1,0 +1,160 @@
+
+/* Обнуление */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+/* Шрифт по умолчанию */
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+}
+/* --------------------- */
+
+/* Цвета */
+:root {
+	--lightgreen-color: #E1EDE6;
+	--green-color: #598D66;
+	--black-color: #2C2D35;
+	--gray-color: #86928B;
+	--yellow-color: #EEDB6D;
+	--white-color: #F4F6F5;
+                     
+}
+/* --------------------- */
+
+.container {
+	max-width: 1160px;
+	padding: 0 25px;
+	margin: 0 auto     ;
+}
+
+.header {
+	background-color: var(--lightgreen-color);
+}
+.header__body {
+	height: 100px;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+}
+.header__logo {
+}
+.header__menu {
+	display: flex;
+	flex: 1 0 auto;
+	justify-content: flex-end;
+}
+
+.header__menu-item {
+	padding-right:  60px;
+	font-size: 20px;
+}
+
+.header__shopping-cart {
+}
+
+.production {
+}
+.production__body {
+	display: flex;
+}
+.production__pic {
+	flex: 1;
+}
+.production__right-block {
+	flex: 1;
+	padding: 0 15px;
+
+}
+.production__title {
+	font-size: 60px;
+	line-height: 1.1em;
+	margin-bottom: 20px;
+}
+.production__title span {
+	color: var(--green-color);
+}
+.production__discr {
+	color: var(--gray-color);
+	line-height: 1.5em;
+	margin-bottom: 60px;
+}
+.production__button {
+	width: 225px;
+	height: 65px;
+	/* display: flex; */
+	font-size: 20px;
+	color: var(--green-color);
+	border: 1px solid var(--green-color);
+	background-color: transparent;
+}
+
+.catalog {
+}
+.catalog__header {
+}
+.catalog__title {
+}
+.catalog__tabs {
+}
+.catalog__tabs-item {
+}
+.catalog__tabs-item_active {
+}
+.catalog__body {
+}
+.catalog__item {
+}
+.catalog__item-pic {
+}
+.catalog__item-author {
+}
+.catalog__item-name {
+}
+.catalog__item-prop {
+}
+.catalog__item-price {
+}
+.catalog__item-button {
+}
+
+
