@@ -104,6 +104,10 @@ body {
 	font-size: 20px;
 }
 
+.header__menu-item:hover{
+	text-decoration: underline;
+}
+
 .header__shopping-cart {
 }
 
@@ -141,6 +145,10 @@ body {
 	background-color: transparent;
 }
 
+.production__button:hover {
+	box-shadow:  0 0 10px gray;
+}
+
 .catalog {
 }
 .catalog__header {
@@ -171,6 +179,11 @@ body {
 	font-size: 20px;
 }
 
+.catalog__tabs-item:hover {
+	box-shadow: 0 0 10px gray;
+}
+
+
 .catalog__tabs-item_active {
 	background-color: var(--btnactive-color);
 	color: var(--btnactive_text-color);
@@ -178,9 +191,11 @@ body {
 .catalog__body {
 	display: flex;
 	flex-wrap: wrap;
-	/* margin: 0 -15px; */
 	margin: 0 -15px 70px -15px;
+}
 
+.catalog__body_unactive {
+	display: none;
 }
 
 .catalog__item {
@@ -225,6 +240,11 @@ body {
 	font-size: 20px;
 }
 
+.catalog__item-button:hover{
+	box-shadow:  0 0 10px gray;
+}
+
+
 .new-collection {
 	background-image: url('../img/main/new-banner.png');
 	background-repeat: no-repeat;
@@ -263,6 +283,10 @@ body {
 	color: var(--new-coll-button-text-color);
 	font-size: 20px;
 	padding: 21px 61px;
+}
+
+.new-collection__button:hover {
+	box-shadow:  0 0 10px white;
 }
 	
 .team {
@@ -337,10 +361,19 @@ body {
 	font-size: 20px;
 	color: var(--black-color);
 }
+.footer__nav-title:hover {
+	text-decoration: underline;
+}
+
 .footer__nav-item {
 	color: var(--gray-color);
 	line-height: 1.5em;
 }
+
+.footer__nav-item:hover {
+	text-decoration: underline;
+}
+
 .footer__right-block {
 }
 .footer__socials-body {
