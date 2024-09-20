@@ -69,6 +69,10 @@ body {
 	--card_text-color: #2C2D35;
 	--card_greytext-color: #86928B;
 	--card_backgr-color: #E1EDE6;
+	--new-coll-descr-color: #FFFFFF;
+	--new-coll-title-color: #F4F6F5;
+	--new-coll-button-color: #EEDB6D;
+	--new-coll-button-text-color: #2C2D35;
 }
 /* --------------------- */
 
@@ -222,58 +226,132 @@ body {
 }
 
 .new-collection {
+	background-image: url('../img/main/new-banner.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 70px;
 }
 .new-collection__body {
+	/* margin: auto; */
+	/* height: auto; */
+	/* height: 300px; */
+	width: 48%;
+	padding: 70px 0;
 }
+
+.new-collection__title-item {
+	display: flex;
+	margin-bottom: 20px;
+}
+
 .new-collection__logo {
+	padding-right: 20px;
 }
 .new-collection__title {
+	color: var(--new-coll-title-color);
+	font-size: 40px;
 }
 .new-collection__text {
+	color: var(--new-coll-descr-color);
+	line-height: 1.5em;
+	margin-bottom: 60px;
+
 }
 .new-collection__button {
+	background-color: var(--new-coll-button-color);
+	color: var(--new-coll-button-text-color);
+	font-size: 20px;
+	padding: 21px 61px;
 }
+	
 .team {
+	margin-bottom: 70px;
 }
 .team__body {
+	display: flex;
 }
 .team__left-image {
 }
 .team__right-column {
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	padding-bottom: 44px;
+	justify-content: flex-end;
 }
 .team__title {
+	font-size: 40px;
+	color: var(--black-color);
+	margin-bottom: 20px;
 }
 .team__text {
+	color: var(--black-color);
+	line-height: 1.5em;
+	margin-bottom: 20px;
+
 }
 .team__photos {
+	display: flex;
+	gap: 30px;
 }
 .team__photo {
 }
+
+
 .footer {
+	background-color: var(--lightgreen-color);
 }
-.footer__contacts {
+
+.footer__body {
+	display: flex;
+	padding: 23px 0;
+}
+
+.footer__left-col {
+	margin-right: 4%;
 }
 .footer__logo {
+	margin-bottom: 35px;
 }
 .footer__tel {
+	color: var(--black-color);
+	font-size: 20px;
+	margin-bottom: 8px;
 }
 .footer__creator {
+	color: var(--gray-color);
 }
 .footer__nav {
+	padding: 0 60px;
+	display: flex;
+	gap: 60px; 
+	flex: 1 1 auto;
 }
 .footer__nav-column {
 }
 .footer__nav-title {
+	font-size: 20px;
+	color: var(--black-color);
 }
 .footer__nav-item {
+	color: var(--gray-color);
+	line-height: 1.5em;
 }
 .footer__right-block {
 }
-.footer__socials {
+.footer__socials-body {
+	display: flex;
+	gap: 30px;
+	/* flex-direction: column; */
+	margin-bottom: 10px;
 }
 .footer__socials-item {
 }
 .footer__rights {
+	font-size: 12px;
+	color: var(--gray-color);
+	line-height: 1.2em;
 }
 
 
