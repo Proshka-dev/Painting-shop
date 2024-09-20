@@ -329,6 +329,9 @@ body {
 	flex: 1 1 auto;
 }
 .footer__nav-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 .footer__nav-title {
 	font-size: 20px;
