@@ -196,6 +196,8 @@ body {
 
 .catalog__body_unactive {
 	display: none;
+	/* flex-wrap: wrap; */
+	/* margin: 0 -15px 70px -15px; */
 }
 
 .catalog__item {

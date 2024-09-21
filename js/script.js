@@ -1,9 +1,56 @@
-const catalogButton2 = document.querySelector("#catalog-btn2")
-const catalogBody2 = document.querySelector("#catalog-btn2")
 
+const catalogButton1 = document.querySelector("#catalog-btn1")
+const catalogButton2 = document.querySelector("#catalog-btn2")
+const catalogButton3 = document.querySelector("#catalog-btn3")
+const catalogBody1 = document.querySelector("#catalog-body1")
+const catalogBody2 = document.querySelector("#catalog-body2")
+const catalogBody3 = document.querySelector("#catalog-body3")
 
 console.log(catalogButton2)
+console.log(catalogBody1)
 console.log(catalogBody2)
+console.log(catalogBody3)
+
+function makeActiveTab1() {
+    console.log("стаботала функция 2")
+    console.log(catalogBody1)
+    console.log(catalogBody2)
+    console.log(catalogBody3)
+    
+    //делаем кнопку 1 и вкладку 1 активными
+    catalogButton1.setAttribute ("class", "catalog__tabs-item catalog__tabs-item_active")
+    catalogButton2.setAttribute ("class", "catalog__tabs-item")
+    catalogButton3.setAttribute ("class", "catalog__tabs-item")
+    catalogBody1.setAttribute ("class", "catalog__body")
+    catalogBody2.setAttribute ("class", "catalog__body catalog__body_unactive")
+    catalogBody3.setAttribute ("class", "catalog__body catalog__body_unactive")
+}
+function makeActiveTab2() {
+    console.log("стаботала функция 2")
+    console.log(catalogBody1)
+    console.log(catalogBody2)
+    console.log(catalogBody3)
+        //делаем кнопку 2 и вкладку 2 активными
+    catalogButton1.setAttribute ("class", "catalog__tabs-item")
+    catalogButton2.setAttribute ("class", "catalog__tabs-item catalog__tabs-item_active")
+    catalogButton3.setAttribute ("class", "catalog__tabs-item")
+    catalogBody1.setAttribute ("class", "catalog__body catalog__body_unactive")
+    catalogBody2.setAttribute ("class", "catalog__body")
+    catalogBody3.setAttribute ("class", "catalog__body catalog__body_unactive")
+}
+function makeActiveTab3() {
+    console.log("стаботала функция 2")
+    console.log(catalogBody1)
+    console.log(catalogBody2)
+    console.log(catalogBody3)
+        //делаем кнопку 3 и вкладку 3 активными
+    catalogButton1.setAttribute ("class", "catalog__tabs-item")
+    catalogButton2.setAttribute ("class", "catalog__tabs-item")
+    catalogButton3.setAttribute ("class", "catalog__tabs-item catalog__tabs-item_active")
+    catalogBody1.setAttribute ("class", "catalog__body catalog__body_unactive")
+    catalogBody2.setAttribute ("class", "catalog__body catalog__body_unactive")
+    catalogBody3.setAttribute ("class", "catalog__body")
+}
 
 
 // const calcScreen = document.querySelector("[class=calc-screen] span")
