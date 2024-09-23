@@ -548,7 +548,6 @@ body {
 	/* Наша команда */
 	.team {
 		margin-bottom: 94px;
-/
 	}
 	.team__body {
 		flex-direction: column;
@@ -576,7 +575,7 @@ body {
 	/* Нижний колонтитул */
 	.footer__body {
 		flex-direction: column;
-}
+	}
 	.footer__mobile-logo {
 		display: block;
 		margin-bottom: 35px;
