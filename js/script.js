@@ -33,3 +33,15 @@ function makeActiveTab3() {
     catalogBody2.setAttribute ("class", "catalog__body catalog__body_unactive")
     catalogBody3.setAttribute ("class", "catalog__body")
 }
+
+function activateBurgerMenu() {
+    console.log("Активируем бургер")
+    const burgerMenuPanel = document.querySelector("#burgerMenu")
+    burgerMenuPanel.setAttribute ("class", "header__burger-menu_active")
+}
+
+function deactivateBurgerMenu() {
+    console.log("Отключаем бургер")
+    const burgerMenuPanel = document.querySelector("#burgerMenu")
+    burgerMenuPanel.setAttribute ("class", "header__burger-menu_unactive")
+}

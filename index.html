@@ -40,8 +40,27 @@
 						О нас
 					</button>
 				</nav>
+
 				<div class="header__icons">
-					<button class="header__burger">
+
+					<!-- Меню бургер				 -->
+					<div class="header__burger-menu_unactive" id="burgerMenu">
+						<button class="header__burger-menu-icon" onclick="deactivateBurgerMenu();">
+							<img src="img/icons/x.svg" alt="">
+						</button>
+						<button class="header__burger-menu-item">
+							Репродукции
+						</button>
+						<button class="header__burger-menu-item">
+							Новинки
+						</button>
+						<button class="header__burger-menu-item">
+							О нас
+						</button>
+					</div>
+					<!-- ********************************** -->
+
+					<button class="header__burger"  onclick="activateBurgerMenu();">
 						<img src="img/icons/burger.png" alt="">
 					</button>
 					<button class="header__shopping-cart">
