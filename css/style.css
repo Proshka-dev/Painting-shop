@@ -140,10 +140,13 @@ button {
 	display: flex;
 }
 .production__pic {
-	flex: 1;
+	flex: 1 1 auto;
+	max-width: 50%;
+	object-fit: contain;
+
 }
 .production__right-block {
-	flex: 1;
+	flex: 1 1 auto;
 	padding: 0 15px;
 
 }
@@ -320,8 +323,12 @@ button {
 	display: flex;
 }
 .team__left-image {
+	flex: 1 1 auto;
+	max-width: 40%;
+	object-fit: contain;
 }
 .team__right-column {
+	flex: 2 2 auto;
 	display: flex;
 	flex-direction: column;
 	padding-left: 30px;
@@ -365,6 +372,7 @@ button {
 }
 .footer__left-column {
 	margin-right: 5%;
+	min-width: 170px;
 }
 .footer__logo {
 	margin-bottom: 35px;
