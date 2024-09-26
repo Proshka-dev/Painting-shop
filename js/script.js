@@ -45,3 +45,37 @@ function deactivateBurgerMenu() {
     const burgerMenuPanel = document.querySelector("#burgerMenu")
     burgerMenuPanel.setAttribute ("class", "header__burger-menu_unactive")
 }
+
+// let arr = ['Ваня', 'Петя', 'Оля'];
+
+// let resultArr = arr.map(function (item, index, array) {
+//     console.log(item);
+//     console.log(index);
+//     console.log(array);
+//     console.log('---');
+//     return item[0];
+// })
+
+// const htmlElem = document.documentElement;
+// const headElem = document.head;
+// const bodyElem = document.body;
+// console.log(headElem);
+// console.log(bodyElem);
+// console.log(htmlElem);
+
+const bodyChildNodes = document.body.children;
+
+// for (currElem of bodyChildNodes) {
+//     console.log(currElem);
+// }
+
+// bodyChildNodes.forEach(currElem => {
+//     console.log(currElem);
+// });
+
+for (currElem of bodyChildNodes) {
+    console.log(currElem);
+};
+
+ console.log(bodyChildNodes);
+
