@@ -135,6 +135,7 @@ button {
 }
 
 .production {
+	margin-bottom: 70px;
 }
 .production__body {
 	display: flex;
@@ -184,10 +185,13 @@ button {
 .catalog__title {
 	font-size: 40px;
 	line-height: 1.1em;
-	margin-bottom: 30px;
+	margin-right: 32px;
 }
 .catalog__tabs {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+	margin-bottom: 30px;
 }
 .catalog__tabs-item {
 	display: flex;
@@ -198,7 +202,7 @@ button {
 	background-color: var(--lightgreen-color-btn);
 	color: var(--black-color);
 	border-radius: 21.5px;
-	margin-left: 32px;
+	/* margin-left: 32px; */
 }
 .catalog__tabs-itemtxt {
 	font-size: 20px;
