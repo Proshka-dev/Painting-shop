@@ -18,14 +18,14 @@ function makeActiveCatalogTab () {
     }
     
     //Получаем номер таба, указанный в id
-    const numberOfTab = parseInt(this.id.replace(/[^0-9\.]+/g, ""))
+    const numberOfTab = this.id.replace(/[^0-9\.]+/g, "")
     console.log(`Номер таба, указанный в ID: ${numberOfTab}`)
 
     //перебираем все табы
     const bodyesOfCatalog = document.getElementsByClassName('catalog__body')
     for (let currBodyOfCatalog of bodyesOfCatalog) {
         const currNumberOfBody = currBodyOfCatalog.id.replace(/[^0-9\.]+/g, "");
-        if (numberOfTab == currNumberOfBody) {
+        if (numberOfTab === currNumberOfBody) {
             console.log(`Активация тела каталога номер ${currNumberOfBody}`)
             currBodyOfCatalog.setAttribute ("class", "catalog__body")
         }
@@ -48,8 +48,54 @@ for (let i = 0; i < buttonsCatalog.length; i++) {
     currButtonCatalog.addEventListener('click', makeActiveCatalogTab)
 }
 
+// ******************* Активация / деактивация меню бургер ****************************
+
+//получаем элемент с иконкой бургера
+const iconOpenBurger = document.querySelector('.header__burger')
+
+//вешаем на событие click по этому элементу функцию activateBurgerMenu
+iconOpenBurger.addEventListener('click', activateBurgerMenu)
+
+//функция для активации бургера
+function activateBurgerMenu(event) {
+    console.log("Активируем бургер")
+    const burgerMenuPanel = document.querySelector("#burgerMenu")
+    burgerMenuPanel.setAttribute ("class", "header__burger-menu_active")
+    event.stopPropagation()
+}
 
 
+
+//получаем элемент с иконкой-крестиком
+const iconCloseBurger = document.querySelector('.header__burger-menu-icon')
+
+//вешаем на событие click по этому элементу функцию deactivateBurgerMenu
+iconCloseBurger.addEventListener('click', deactivateBurgerMenu)
+
+//функция для деактивации бургера
+function deactivateBurgerMenu(event) {
+    console.log("Отключаем бургер")
+    const burgerMenuPanel = document.querySelector("#burgerMenu")
+    burgerMenuPanel.setAttribute ("class", "header__burger-menu_unactive")
+}
+
+//******** Отключение меню бургера при клике вне его области ***********************/
+
+const burgerMenu1 = document.querySelector("#burgerMenu");
+console.log(burgerMenu1);
+ 
+document.addEventListener( 'click', (event) => {
+	const withinBoundaries = event.composedPath().includes(burgerMenu1);
+
+    if ( burgerMenu1.classList.contains('header__burger-menu_active')) {
+            console.log('Бургер меню включено>');
+            if ( ! withinBoundaries ) {
+                burgerMenu1.setAttribute ("class", "header__burger-menu_unactive");
+                console.log('Клик вне области');
+            }
+    }
+ 
+})
 
 //**********************************  Старый код  ****************************************/
 // const catalogButton1 = document.querySelector("#catalog-btn1")
@@ -87,17 +133,6 @@ for (let i = 0; i < buttonsCatalog.length; i++) {
 //     catalogBody3.setAttribute ("class", "catalog__body")
 // }
 
-// function activateBurgerMenu() {
-//     console.log("Активируем бургер")
-//     const burgerMenuPanel = document.querySelector("#burgerMenu")
-//     burgerMenuPanel.setAttribute ("class", "header__burger-menu_active")
-// }
-
-// function deactivateBurgerMenu() {
-//     console.log("Отключаем бургер")
-//     const burgerMenuPanel = document.querySelector("#burgerMenu")
-//     burgerMenuPanel.setAttribute ("class", "header__burger-menu_unactive")
-// }
 //************************************  Тестирование  ************************************* */
 // let arr = ['Ваня', 'Петя', 'Оля'];
 
@@ -133,3 +168,7 @@ for (let i = 0; i < buttonsCatalog.length; i++) {
 //  console.log(bodyChildNodes);
 //************************************************************************************************** */
 
+const car = {
+    model: 'Toyota',
+    year: 2007,
+}
