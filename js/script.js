@@ -48,7 +48,7 @@ for (let i = 0; i < buttonsCatalog.length; i++) {
     currButtonCatalog.addEventListener('click', makeActiveCatalogTab)
 }
 
-// ******************* Активация / деактивация меню бургер ****************************
+// ******************* Активация меню бургер ****************************
 
 //получаем элемент с иконкой бургера
 const iconOpenBurger = document.querySelector('.header__burger')
@@ -60,11 +60,13 @@ iconOpenBurger.addEventListener('click', activateBurgerMenu)
 function activateBurgerMenu(event) {
     console.log("Активируем бургер")
     const burgerMenuPanel = document.querySelector("#burgerMenu")
-    burgerMenuPanel.setAttribute ("class", "header__burger-menu_active")
+    burgerMenuPanel.classList.remove ('header__burger-menu_unactive')
+    burgerMenuPanel.classList.add ('header__burger-menu_active')
     event.stopPropagation()
 }
 
 
+// ******************* Деактивация меню бургер ****************************
 
 //получаем элемент с иконкой-крестиком
 const iconCloseBurger = document.querySelector('.header__burger-menu-icon')
@@ -76,26 +78,32 @@ iconCloseBurger.addEventListener('click', deactivateBurgerMenu)
 function deactivateBurgerMenu(event) {
     console.log("Отключаем бургер")
     const burgerMenuPanel = document.querySelector("#burgerMenu")
-    burgerMenuPanel.setAttribute ("class", "header__burger-menu_unactive")
+    burgerMenuPanel.classList.remove ('header__burger-menu_active')
+    burgerMenuPanel.classList.add ('header__burger-menu_unactive')
 }
 
 //******** Отключение меню бургера при клике вне его области ***********************/
 
 const burgerMenu1 = document.querySelector("#burgerMenu");
-console.log(burgerMenu1);
- 
-document.addEventListener( 'click', (event) => {
-	const withinBoundaries = event.composedPath().includes(burgerMenu1);
 
+//добавляем слушателя события click на весь документ
+document.addEventListener( 'click', closeBurgerOnAreaClick)
+
+function closeBurgerOnAreaClick (event) {
+    // withinBoundaries === true, если клик в пределах меню
+
+    // Метод composedPath() объекта event возвращает путь события, представляющий собой
+    // массив объектов, на которых будут вызваны обработчики событий.
+    // Метод includes проверяет наличие элемента в массиве.
+    const withinBoundaries = event.composedPath().includes(burgerMenu1);
+
+    //Если меню бургера активно
     if ( burgerMenu1.classList.contains('header__burger-menu_active')) {
-            console.log('Бургер меню включено>');
-            if ( ! withinBoundaries ) {
-                burgerMenu1.setAttribute ("class", "header__burger-menu_unactive");
-                console.log('Клик вне области');
-            }
+        if ( ! withinBoundaries ) {
+            deactivateBurgerMenu();
+        }
     }
- 
-})
+}
 
 //**********************************  Старый код  ****************************************/
 // const catalogButton1 = document.querySelector("#catalog-btn1")
